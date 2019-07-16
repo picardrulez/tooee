@@ -1,11 +1,11 @@
 package tooee
 
-type weapon struct {
+type Weapon struct {
 	Cost     int
 	Weight   int
 	Size     string
 	Type     string
 	Speed    string
-	SmDamage diceRoll
-	LDamage  diceRoll
+	SmDamage DiceRoll
+	LDamage  DiceRoll
 }

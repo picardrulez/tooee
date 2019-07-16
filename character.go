@@ -1,7 +1,7 @@
 package tooee
 
-type character struct {
+type Character struct {
 	AC     int
 	Thaco  int
-	Weapon weapon
+	Weapon Weapon
 }

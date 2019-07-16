@@ -5,12 +5,12 @@ import (
 	"time"
 )
 
-type diceRoll struct {
+type DiceRoll struct {
 	Sides int
 	Rolls int
 }
 
-func rollDice(dice diceRoll) int {
+func RollDice(dice DiceRoll) int {
 	rand.Seed(time.Now().UnixNano())
 	min := dice.Rolls
 	max := dice.Sides * dice.Rolls

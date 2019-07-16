@@ -2,17 +2,17 @@ package tooee
 
 import ()
 
-func initiative(players int) map[int]int {
+func Initiative(players int) map[int]int {
 	var results map[int]int
 	for i := 1; i <= players; i++ {
-		roll := rollDice(diceRoll{10, 1})
+		roll := RollDice(DiceRoll{10, 1})
 		results[i] = roll
 	}
 	return results
 }
 
-func thaco(attacker character, defender character) (hit bool, epic bool) {
-	thacoRoll := rollDice(diceRoll{20, 1})
+func Thaco(attacker Character, defender Character) (hit bool, epic bool) {
+	thacoRoll := RollDice(DiceRoll{20, 1})
 	target := attacker.Thaco - defender.AC
 	if thacoRoll >= target {
 		if thacoRoll == 20 {
