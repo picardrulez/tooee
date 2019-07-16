@@ -10,3 +10,20 @@ func initiative(players int) map[int]int {
 	}
 	return results
 }
+
+func thaco(attacker character, defender character) (hit bool, epic bool) {
+	thacoRoll := rollDice(diceRoll{20, 1})
+	target := attacker.Thaco - defender.AC
+	if thacoRoll >= target {
+		if thacoRoll == 20 {
+			return true, true
+		}
+		return true, false
+	} else {
+		if thacoRoll == 1 {
+			return false, true
+		} else {
+			return false, true
+		}
+	}
+}
